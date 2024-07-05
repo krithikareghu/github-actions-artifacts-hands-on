@@ -4,7 +4,7 @@ on:
   push:
     branches: 
         - 'main'
-        
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -28,7 +28,7 @@ jobs:
       - name: download
         uses: actions/download-artifact@v2
         with:
-          name: hello-downloads
+          name: hello-artifact
           path: ./artifacts
       - name: display
         run: cat ./artifacts/hello.txt
